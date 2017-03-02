@@ -27,7 +27,7 @@
 // Combined:
 var mySecondVariable = 'Hello Moon'
 
-
+// Recommanded way is this this one*/
 
 //
 // 2. Invoking/Calling our variables

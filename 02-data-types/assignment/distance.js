@@ -11,8 +11,8 @@
 var x,y,x1_y1,x2_y2,x1,x2,y1,y2
 x=process.argv[2];
 y=process.argv[3];
-// console.log(x);
-// console.log(y);
+console.log(x);
+console.log(y);
 x1_y1=x.split(",");
 x2_y2=y.split(",");
 // console.log(x1_y1);
