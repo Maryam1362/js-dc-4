@@ -19,13 +19,13 @@
 //
 
 // A. Declaring a variable
-// var myFirstVariable
+ var myFirstVariable
 
 // B. Assigning a value to a variable
-// myFirstVariable = 'Hello World'
+ myFirstVariable = 'Hello World'
 
 // Combined:
-// var mySecondVariable = 'Hello Moon'
+var mySecondVariable = 'Hello Moon'
 
 
 

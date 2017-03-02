@@ -20,9 +20,9 @@
 // console.log( "hello "world", hello" )
 // console.log( 'hello 'world', hello' )
 
-//
-// 2. String Concatenation
-//
+// //
+// // 2. String Concatenation
+// //
 
 // console.log( 'hello ' + 'world' )
 
@@ -45,9 +45,11 @@
 //
 
 // 1. Concatenate your first and last name into a single string and console.log it
+console.log("Maryam"+" "+"Sarabian")
+
 // 2. Using `.charAt()` concatenate the 3rd, 5th and 1st letters of your full name together and console.log it
 
-
+console.log('Maryam Sarabian'.charAt(0)+'Maryam Sarabian'.charAt(2)+'Maryam Sarabian'.charAt(4))
 
 /**
  * ES2015

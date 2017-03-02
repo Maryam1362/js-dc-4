@@ -13,7 +13,7 @@
 // True
 // console.log( true ) // => true
 
-// False
+// // False
 // console.log( false ) // => false
 
 
@@ -49,8 +49,8 @@
 // Exercise
 //
 
-// 1. What does true || false evaluate to?
-// 2. What does !true || !false evaluate to?
-// 3. what does !false && true || false evaluate to?
-// 4. what does !false || false && false evaluate to?
-// 5. what does ( !false || false ) && false evaluate to?
+1. What does true || false evaluate to? true
+ 2. What does !true || !false evaluate to? true
+3. what does !false && true || false evaluate to?true
+4. what does !false || false && false evaluate to?true
+5. what does ( !false || false ) && false evaluate to?false
