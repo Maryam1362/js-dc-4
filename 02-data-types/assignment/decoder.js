@@ -4,7 +4,7 @@
  */
 
  // Your code here
-
+var code=[]
  /**
   * Question 2
   * Add the following characters to the end of the code array:
@@ -14,7 +14,11 @@
   */
 
 // Your code here
+code.push('x', 'u', 's', 'a', 'e', 'l', 'p', 'e', 'e', 'n',
+  'i', 't', 'l', 'a', 'v', 'o', 'x', 'e', 'r',
+   'o', 'm', 'c')
 
+//console.log(code);
 /**
  * Question 3
  * Remove the first and last elements of the array.
@@ -22,14 +26,18 @@
  */
 
 // Your code here
-
+code.splice(0,1)
+code.splice(code.length-1,code.length)
+//console.log(code)
 /**
  * Question 4
  * Reverse the array.
  */
 
+//console.log(code);
 // Your code here
-
+code.reverse();
+//console.log(code)
 /**
  * Question 5
  * Replace the last element in the array with an 'e'.
@@ -37,7 +45,9 @@
  */
 
 // Your code here
-
+code.splice(code.length-1,code.length)
+code.push('e')
+//console.log(code)
 /**
  * Question 6
  * Replace the 5th element and 14th element with space characters.
@@ -45,6 +55,9 @@
  */
 
 // Your code here
+code[4]=' '
+code[13]=' '
+console.log(code)
 
 /**
  * Question 7
@@ -53,3 +66,5 @@
  */
 
  // Your code here
+ console.log( code.join())
+
