@@ -5,8 +5,11 @@ Hello World
 Write a function that `console.log`s 'Hello World' and call it.
 
 */
+// function mytest(){
+// 	console.log("hello World")
+// }
 
-
+// mytest();
 
 
 
@@ -22,3 +25,15 @@ Use both of your functions a few times. If there's time, write
 functions that add or subtract more than 1 from myNumber.
 
 */
+
+ var myNumber =13;
+function addOne(){
+	myNumber++;
+}
+function subtractOne(myNumber){
+	myNumber--;
+}
+addOne();
+subtractOne();
+
+console.log(myNumber);
