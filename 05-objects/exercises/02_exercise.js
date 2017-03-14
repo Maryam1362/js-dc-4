@@ -7,7 +7,20 @@ which is a method. Use it to answer the prompts below.
 
 */
 
+var car={
 
+	Make: 'Toyota',
+	Model:'Camery',
+	year: '2013',
+	color:'green',
+	
+	brandcar:function(){
+       console.log("My car brand is"+ car.Make)
+	}
+
+}
+
+console.log(car)
 /*
 
 Redeclare your car here. It can either by by typing it out again or by
@@ -24,6 +37,7 @@ properties, one of which is a method
 Get one of the properties from your object using dot notation
 
 */
+console.log(car.Make)
 
 
 
@@ -32,6 +46,7 @@ Get one of the properties from your object using dot notation
 Get one of the properties from your object using bracket notation
 
 */
+console.log(car["Make"])
 
 
 /*
@@ -40,10 +55,13 @@ Set one of the values of one of your properties using either dot notation or
 bracket notation
 
 */
-
+car.year='2012'
 
 /*
 
 Call your car's method
 
 */
+car.brandcar();
+
+console.log(car.brandcar;

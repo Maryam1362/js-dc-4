@@ -22,19 +22,19 @@ executed before moving on!
 */
 
 // Declaring our first object
-// var Person = {
-//   'first name': 'Zakk',
-//   lastName: 'Fleischmann',
-//   favoriteColors: 'green',
-//   favoriteNumbers: [7, 8 ,9],
-//   height: {
-//     feet: 6,
-//     inches: 4
-//   },
-//   sayHello: function( name ) {
-//     console.log( 'Hello, ' + (name || 'you') + '! Hope you are well!' )
-//   }
-// }
+var Person = {
+  'first name': 'Zakk',   //if the key has space in it we need to have it as string'
+  lastName: 'Fleischmann',
+  favoriteColors: 'green',
+  favoriteNumbers: [7, 8 ,9],
+  height: {
+    feet: 6,
+    inches: 4
+  },
+  sayHello: function( name ) {
+    console.log( 'Hello, ' + (name || 'you') + '! Hope you are well!' )
+  }
+}
 
 
 /*
@@ -44,13 +44,19 @@ executed before moving on!
 */
 
 // Getting values from our object
-// Person['first name'] // Bracket notation
-// Person.lastName // Dot notation
+console.log(Person['first name']) // Bracket notation
+console.log(Person['lastName'])
+console.log(Person.lastName) // Dot notation
+console.log(Person)
 
 // Setting values from our object (with reassignment)
-// Person.favoriteColors = 'just green'
-// Person.height.feet = 10
-// Person['height']['inches'] = 6
+Person.favoriteColors = 'just green'
+Person.height.feet = 10
+Person['height']['inches'] = 6
+Person.sayHello= function(){
+
+}// change the sayHeloo
+
 
 // console.log( Person.height )
 
@@ -78,15 +84,15 @@ executed before moving on!
 
 */
 
-// var jsonData = {
-//   "Foods": [
-//     {"name":"aubergine", "color":"purple", "price": 1.59},
-//     {"name":"apple", "color":"red", "price": 0.78},
-//     {"name":"nuts", "color":"brown", "price": 2.23}
-//   ]
-// }
-//
-// console.log( jsonData.Foods[1] ) // {"name":"apple", "color":"red", "price": 0.78}
+var jsonData = {
+  "Foods": [
+    {"name":"aubergine", "color":"purple", "price": 1.59},
+    {"name":"apple", "color":"red", "price": 0.78},
+    {"name":"nuts", "color":"brown", "price": 2.23}
+  ]
+}
+
+ console.log( jsonData.Foods[1] ) // {"name":"apple", "color":"red", "price": 0.78}
 
 
 /*
@@ -96,27 +102,30 @@ executed before moving on!
 */
 
 // Part 1
-// var Car = {
-//   model: '',
-//   make: '',
-//   year: '',
-//   color: '',
-//   engineStart: false,
-//   turnOn: function() {
-//     this.engineStart = true
-//   },
-//   turnOff: function() {
-//     this.engineStart = false
-//   },
-//   drive: {
-//     forward: function() { console.log( 'drive forward' ) },
-//     left: function() { console.log( 'drive left' ) },
-//     right: function() { console.log( 'drive right' ) },
-//     reverse: function() { console.log( 'drive reverse' ) }
-//   }
-// }
+var Car = {
+  model: '',
+  make: '',
+  year: '',
+  color: '',
+  engineStart: false,
+  turnOn: function() {
+    this.engineStart = true
+  },
+  turnOff: function() {
+    this.engineStart = false
+  },
+  drive: {
+    forward: function() { console.log( 'drive forward' ) },
+    left: function() { console.log( 'drive left' ) },
+    right: function() { console.log( 'drive right' ) },
+    reverse: function() { console.log( 'drive reverse' ) }
+  }
+}
+Car =new 
+Car.model
+Car.make
 
-// Part 2
+// Part 2 here is where we define a class in javascript2
 function Car ( model, make, year, color ) {
 
   this.model = model

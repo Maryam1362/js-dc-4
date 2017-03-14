@@ -20,3 +20,25 @@ Apple, Red, 0.78
 Nuts, Brown, 2.23
 
 */
+var myjason=require('./data.json')
+// console.log(myjason[0])
+// console.log((myjason["Store Name"])+ " Current Stock")
+// console.log("Item, Color, Price")
+
+var storeSize = Object.keys (myjason.Foods[0])
+
+ console.log(storeSize)
+ console.log(storeSize.join(','))
+var foods = myjason.Foods
+
+for(var i = 0; i < foods.length; i++){
+     
+console.log( foods[ i ].name  + ', '+ foods[ i ].color+ ','+ foods[ i ].price )
+}
+
+//  //    for(var j=0; j <=f oods[i].length; j++){
+
+// 	// 	console.log((foods[i][j])
+// 	// }
+
+// }
