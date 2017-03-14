@@ -97,6 +97,7 @@ function dealHand( handLength, deck ) {
   var hand
   handLength = handLength || 1
 
+
   if ( handLength === 1 ) {
     // if handLength is one, then we just want to return a random card
     // as a string
@@ -175,3 +176,7 @@ function getPumped() {
 
 // Uncomment the following line to see it work:
 // getPumped()
+
+
+
+
