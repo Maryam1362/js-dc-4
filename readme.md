@@ -141,6 +141,7 @@ Our final class on Javascript as a language covers Objects. This lesson will als
 - [Lesson](https://www.youtube.com/watch?v=5jAj3ZullDA)
 
 ### Class 06: Lab
+Today's lesson is short and sweet! We'll go over npm and breaking our program out into multiple files then give you the rest of the time to work on the lab!
 
 #### Lab
 - [js-dc-4-Lab01](https://github.com/ga-students/JS-DC-4-Lab01)
@@ -149,7 +150,8 @@ Our final class on Javascript as a language covers Objects. This lesson will als
 - [Slides](https://ga-students.github.io/js-dc-4/06-lab)
 - [Assignment](06-lab/assignment.md)
 - [Lesson Notes](06-lab/lesson_plan.md)
-
+- [Mini-lessons](https://www.youtube.com/watch?v=zAUKqWrwV3A)
+- [Lab walk through](https://www.youtube.com/watch?v=QXXGT0-Mz-M&feature=youtu.be)
 
 ### Class 07: Intro to the DOM
 
