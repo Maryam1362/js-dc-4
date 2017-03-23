@@ -164,6 +164,7 @@ Today's lesson is short and sweet! We'll go over npm and breaking our program ou
 - [Slides](https://ga-students.github.io/js-dc-4/07-intro-to-dom)
 - [Assignment](07-intro-to-dom/assignment.md)
 - [Lesson Notes](07-intro-to-dom/lesson_plan.md)
+- [Lesson](https://www.youtube.com/watch?v=YO3987ePPB8)
 
 
 ### Class 08: Events
@@ -174,9 +175,9 @@ Today's lesson is short and sweet! We'll go over npm and breaking our program ou
 - Work with both events and templates
 
 #### Materials
-- [Slides](https://ga-students.github.io/js-dc-4/08-events-and-templating)
-- [Assignment](08-events-and-templating/assignment/)
-- [Lesson Notes](08-events-and-templating/lesson_plan.md)
+- [Slides](https://ga-students.github.io/js-dc-4/08-events)
+- [Assignment](08-events/assignment/)
+- [Lesson Notes](08-events/lesson_plan.md)
 
 
 ### Class 09: Templating & Build Tools
