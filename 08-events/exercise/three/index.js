@@ -13,9 +13,32 @@ Get an array of all the buttons on the screen. Write an event handler that just 
 
 */
 
+var counterIndex = 0
+
+var counter = document.querySelector('h1')
+
+counter.innerText = 'Counter : ' + counterIndex
+
+
+var buttons = document.querySelectorAll('.js-button')
+
+
+for( var i=0 ;i < buttons.length; i++){
+	buttons[i].addEventListener('click', function(event) {
+		var incrementer = event.target.dataset.incrementer
+		counterIndex += parseInt(incrementer, 10)
+		counter.innerText = 'Counter : ' + counterIndex
+
+	 
+	})
+}
+
+
+/* we can put the listener on the parenet element and get the target of that event
 
 
 /*
+
 
 Refactor your event handler so that it `console.log`s the event object. Poke around the event object
 

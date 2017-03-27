@@ -8,7 +8,7 @@ The exercises at the end of Chapter 13 are due before the start of next class!
 <p style="text-align: center">
   <img src="img/cat.png" style="position: relative">
 </p>
-
+	
 <script>
   var cat = document.querySelector("img");
   var angle = 0, lastTime = null;
