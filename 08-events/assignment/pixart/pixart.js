@@ -26,15 +26,20 @@ How we we create elements in JavaScript and add them to the page?
 
 var square=[]
 var element = document.getElementById("canvas");
-
+var button = document.getElementById("set-color")
+var brush_color = document.querySelector(".brush")
+var currentColor = "green"
 
 for (var i=0; i < 2500 ; i++) {
  square[i] = document.createElement("div");
  square[i].classList.add("square");
-element.appendChild(square[i]);
-
-
+ element.appendChild(square[i]);
+ square[i].addEventListener("mouseover", paint)
+ 
 }
+
+
+
 
 
 /*
@@ -53,11 +58,10 @@ hints:
 
 */
 
-var button = document.getElementById("set-color")
-var brush_color = document.querySelector(".brush")
+
 button.addEventListener("click", function(event){
 
-     var currentColor = document.getElementById("color-field").value
+     currentColor = document.getElementById("color-field").value
      brush_color.style.background = currentColor 
      event.preventDefault(); 
  	
@@ -73,9 +77,19 @@ Now that we can get the color the user wants to paint with from our form, we nee
 Create an event handler that will change the background color of the event target to 
 the current color and attach it to every div.square that you created made above.
 
+
+
+
 Hints:
 (1) you probably want to write your function here and then attach the event in your loop up in Step 1
 (2) think about what event we might want to attach our event handler too; what mouse events 
 are there that might make sense?
 
 */
+ 
+
+function paint( event ) {
+  event.target.style.backgroundColor = currentColor
+}
+
+
