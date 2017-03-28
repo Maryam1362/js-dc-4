@@ -24,17 +24,17 @@ How we we create elements in JavaScript and add them to the page?
 
 */
 
-var square=[]
+var square
 var element = document.getElementById("canvas");
 var button = document.getElementById("set-color")
 var brush_color = document.querySelector(".brush")
 var currentColor = "green"
 
 for (var i=0; i < 2500 ; i++) {
- square[i] = document.createElement("div");
- square[i].classList.add("square");
- element.appendChild(square[i]);
- square[i].addEventListener("mouseover", paint)
+ square= document.createElement("div");
+ square.classList.add("square");   // we could do classname object but this classlist in newer version
+ element.appendChild(square);
+ //square.addEventListener("mouseover", paint)
  
 }
 
@@ -60,10 +60,10 @@ hints:
 
 
 button.addEventListener("click", function(event){
-
+     event.preventDefault();  /*best practice is have the event.preventDefualt on top*/
      currentColor = document.getElementById("color-field").value
      brush_color.style.background = currentColor 
-     event.preventDefault(); 
+     
  	
   })
 
@@ -88,8 +88,14 @@ are there that might make sense?
 */
  
 
-function paint( event ) {
-  event.target.style.backgroundColor = currentColor
-}
+// function paint( event ) {
+//   event.target.style.backgroundColor = currentColor
+// }
 
 
+element.addEventListener('mouseover',function(e){
+
+  e.target.style.background = currentColor
+})
+
+/*have the event listener on parent target**/
