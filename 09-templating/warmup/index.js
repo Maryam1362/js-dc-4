@@ -13,35 +13,48 @@ Follow along, reading each set of instructions carefully to build out this galle
 /*
 
 Step 1:
-Using JavaScript, get the 'js-gallery' list and save it to a variable. Then pull an array of the 'js-gallery-item' elements from your 'js-gallery'.
+Using JavaScript, get the 'js-gallery' list and save it to a variable. 
+Then pull an array of the 'js-gallery-item' elements from your 'js-gallery'.
 
 Hint: think about DOM methods that we can call on DOM elements we've already pulled from the page
 
 */
 
 
-
+var gallery = document.querySelector('.js-gallery')
+var gallery_element = gallery.querySelectorAll('.js-gallery-item')
+console.log(gallery_element)
 
 /*
 
 Step 2:
 Transitioning our gallery from one slide to the next works like this:
-We need to know the width of every slide (they're all the same). We get the gallery and translate it to the left (so negative) by the width of one slide, every few seconds until the last one. Then at the last one, we translate it back to the starting point (which is 0).
+We need to know the width of every slide (they're all the same).
+ We get the gallery and translate it to the left (so negative) by the width of one slide,
+  every few seconds until the last one. 
+  Then at the last one, we translate it back to the starting point (which is 0).
 
-To start, create a variable called slideCount that is equal to the number of slides and another variable called slideWidth that is equal to the width of a single slide.
+To start, create a variable called slideCount that is equal to the number of slides
+ and another variable called slideWidth that is equal to the width of a single slide.
 
 To get the width, try getBoundingClientRect() or offsetWidth.
 
 */
+var slideCount= gallery_element.length
+console.log(slideCount)
 
+var slideWidth =gallery_element[0].offsetWidth
+console.log(slideWidth)
 
 
 /*
 
 Step 3:
-We need to set a timer to run ever 5 seconds. There are many ways to set timers with JavaScript, the one we care about here is the setInterval() function.
+We need to set a timer to run ever 5 seconds. 
+There are many ways to set timers with JavaScript, the one we care about here is the setInterval() function.
 
-setInterval() takes two arguments: a reference to a function and the interval in milliseconds between when setInterval should call that function.
+setInterval() takes two arguments: a reference to a function 
+and the interval in milliseconds between when setInterval should call that function.
 
 What's the difference between referencing and calling a function?
 
@@ -53,6 +66,27 @@ Create a function called transitionSlide that, for now, just `console.log`'s 'Ca
 
 
 
+// function transitionSlide(){
+// 	var currentslide = 1;
+	
+
+// 	if(currentslide < slideCount){
+	
+//      gallery.style.transform = "translateX(-" + slideWidth * currentslide + "px)"
+//       currentslide++;
+	 
+// 	}
+   
+// 	else{
+
+//       gallery.style.transform ="translateX(0)"
+//       currentslide = 1
+
+// 	}
+	
+// 	console.log("called")
+// }
+// setInterval(transitionSlide,1000)
 /*
 
 Step 4:
@@ -63,7 +97,8 @@ Declare a variable called currentSlide and set it equal to 1.
 Inside transitionSlide() we need to do two things:
 1. We need to create an if/else statement where:
   (a) IF currentSlide is less than slideCount we do the following:
-    - take our gallery and change it's transform style property so that it's equal to translateX( delta ), where delta is the width of a single slide times the value of currentSlide.
+    - take our gallery and change it's transform style property so that it's equal to translateX( delta ), 
+    where delta is the width of a single slide times the value of currentSlide.
     - increment currentSlide
   (b) ELSE:
     - set the transform style property so that translateX() is 0
@@ -77,7 +112,10 @@ Hint: delta should always be a negative number
 /*
 
 Step 5:
-To setup - we need to comment out the timer we created in Step 3 and our transitionSlide function in Step 4. We don't need our timer anymore and we're goinog to rewrite our transitionSlide function below! Whoo hoo!
+To setup - 
+we need to comment out the timer we created in Step 3 and our transitionSlide 
+function in Step 4. We don't need our timer anymore and we're goinog 
+to rewrite our transitionSlide function below! Whoo hoo!
 
 */
 
@@ -87,9 +125,13 @@ To setup - we need to comment out the timer we created in Step 3 and our transit
 Step 6:
 We're going to create an event and event handler on the .js-nav-list element.
 
-Create a variable called sliderNav and assign it to the .js-nav-list element. Then add an event listener for a click event and pass it a reference to the function transitionSlide (which we're going to rewrite below)
+Create a variable called sliderNav and assign it to the .js-nav-list element. 
+Then add an event listener for a click event and pass it a reference to the function transitionSlide 
+(which we're going to rewrite below)
 
 */
+var slideNav = document.querySelector('js-nav-list')
+slideNav.addEventListener('click', transitionSlide)
 
 
 
@@ -101,12 +143,17 @@ Declare a function called transitionSlide. transitionSlide takes 1 parameter, ev
 Our transitionSlide function is going to be divided into three parts: Setup, Checks and Execution.
 
 1. Setup:
-We need to (a) prevent any default browser behavior and (b) get the direction from our event target and save it to a variable, called currentDirection.
+We need to (a) prevent any default browser behavior and 
+(b) get the direction from our event target and save it to a variable, called currentDirection.
 
 2. Checks:
-We need to check the current slide and calculate if there is a next slide in that direction. If current slide is the first slide and the current direction is left or if the current slide is the last slide and the direction is right, we shouldn't translate our slider gallery.
+We need to check the current slide and calculate if there is a next slide in that direction.
+ If current slide is the first slide and the current direction is left or if the current slide is the last slide and the direction is right, 
+ we shouldn't translate our slider gallery.
 
-Create a conditional that will handle the cases where (a) the slide direction is left and the current slide is 0 and (b) the slide direction is right and the current slide is the number of slides. Your conditional should just `return` if either of these cases is met. Note: we have to explicit conditions that should be met.
+Create a conditional that will handle the cases where (a) the slide direction is left and 
+the current slide is 0 and (b) the slide direction is right and the current slide is the number of slides.
+ Your conditional should just `return` if either of these cases is met. Note: we have to explicit conditions that should be met.
 
 3. Execution:
 We can transition our slide!
@@ -117,3 +164,21 @@ Then translate your slide, just like we did last time. Just like we did last tim
 
 
 */
+
+var currentslide=0
+
+function transitionSlide(event){
+ event.preventDefault();
+ var currentDirection =event.target.dataset.direction
+ if(currentslide===1 && currentDirection ==='left') return
+ if(currentslide ===slideCount && currentDirection==='right')	return
+ if(currentDirection==='left'){
+ 	currentSlide--
+ }
+ else{
+ 	currentSlide++
+ }
+ gallery.style.transform = "translateX(-" + slideWidth * currentslide + "px)"
+
+
+}
