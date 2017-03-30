@@ -130,7 +130,7 @@ Then add an event listener for a click event and pass it a reference to the func
 (which we're going to rewrite below)
 
 */
-var slideNav = document.querySelector('js-nav-list')
+var slideNav = document.querySelector('.js-nav-list')
 slideNav.addEventListener('click', transitionSlide)
 
 
@@ -173,10 +173,10 @@ function transitionSlide(event){
  if(currentslide===1 && currentDirection ==='left') return
  if(currentslide ===slideCount && currentDirection==='right')	return
  if(currentDirection==='left'){
- 	currentSlide--
+ 	currentslide--
  }
  else{
- 	currentSlide++
+ 	currentslide++
  }
  gallery.style.transform = "translateX(-" + slideWidth * currentslide + "px)"
 
