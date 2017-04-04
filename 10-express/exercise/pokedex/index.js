@@ -1,6 +1,6 @@
 var express = require('express')
-var exphbs  = require('express-handlebars')
-var data    = require('./pokedex.json')
+var exphbs  = require('express-handlebars') // for handelbar
+var data    = require('./pokedex.json')  // import the data
 
 function getPokemon( id ) {
   var pokemon
@@ -13,13 +13,13 @@ function getPokemon( id ) {
   return pokemon
 }
 
-var app = express()
+var app = express()  //create an app
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}))
+app.engine('handlebars', exphbs({defaultLayout: 'main'})) // seting the handlebar for express
 app.set('view engine', 'handlebars')
 
 app.get('/', function( req, res ) {
-  res.render('home', data)
+  res.render('home', data)    //pass data to handelbar 
 })
 
 app.get('/pokemon/:id', function( req, res ) {
@@ -27,6 +27,6 @@ app.get('/pokemon/:id', function( req, res ) {
   res.render('pokemon', pokemon)
 })
 
-app.listen( 5000, function() {
+app.listen( 5000, function() {      //designate a port
   console.log( 'Your pokedex is working' )
 })
