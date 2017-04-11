@@ -1,7 +1,10 @@
 var express = require('express')
 var exphbs = require('express-handlebars')
 var bodyParser = require('body-parser')
-var path = require('path')
+var mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/warmup')
+var Entry = require('./models/entry.js')
+//var path = require('path')
 
 var app = express()
 
@@ -82,7 +85,7 @@ app
     })
 
   })
-  .post('/edit/:id', function( req, res ) {
+  app.post('/edit/:id', function( req, res ) {
     var quoteId = parseInt( req.params.id, 10 )
 
     data.quotes.forEach(function( item ) {

@@ -1,6 +1,7 @@
 {
-  "name": "pokedex",
+  "name": "pokemon",
   "version": "1.0.0",
+  "description": "This is the Pokeapi run by digital ocean: https://pokeapi.co",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +10,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.10.2"
-  },
-  "description": ""
+  }
 }
