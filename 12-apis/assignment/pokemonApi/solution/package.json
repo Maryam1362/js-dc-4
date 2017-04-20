@@ -1,19 +1,12 @@
 {
-<<<<<<< HEAD
-  "name": "inclass",
-=======
-  "name": "in-class",
->>>>>>> 8c0a0f9a6249997ae46beca7017ea97374c850c2
+  "name": "pokemonApi",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the Pokeapi run by digital ocean: https://pokeapi.co Read up on the API documentation to get familiar with the different requests you can make to the API There is a lot of information that you can get back on berries, pokemon, battles, encounters, evolutions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-=======
   "keywords": [],
->>>>>>> 8c0a0f9a6249997ae46beca7017ea97374c850c2
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -22,11 +15,5 @@
     "express-handlebars": "^3.0.0",
     "mongoose": "^4.9.4",
     "nodemon": "^1.11.0"
-<<<<<<< HEAD
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-=======
->>>>>>> 8c0a0f9a6249997ae46beca7017ea97374c850c2
   }
 }
